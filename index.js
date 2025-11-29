@@ -852,6 +852,7 @@ app.put('/api/my/borrow/:id/return', async (req, res) => {
 
 // 仪表盘
 app.get('/api/stats', async (_req, res) => {
+  console.log("chuafa")
   try {
     const [rows] = await pool.query(`
       SELECT
