@@ -1,5 +1,7 @@
 // 基础依赖
-require('dotenv').config();          // ① 最先加载 env
+//require('dotenv').config();          // ① 最先加载 env
+const path = require('path'); // 【新增行】导入 Node.js 内置的 path 模块
+require('dotenv').config({ path: path.resolve(__dirname, '.env') });
 const express = require('express');
 const mysql = require('mysql2/promise');
 const cors = require('cors');
